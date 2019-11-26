@@ -5,4 +5,11 @@
     <string name="txVUsuario">Usuario</string>
     <string name="txVConrasena">Contraseña</string>
     <string name="imagInicioSesio">Imagen</string>
+    <string name="btnInicioFacebook">Inicio con Facebook</string>
+    <string name="imagenFondo1">imagenFondo1</string>
+    <string name="correoElectronico">Correo Electronico</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="mensajeCrearCuenta">Aun no tienes cuenta?</string>
+    <string name="crearCuenta">CREAR CUENTA</string>
+    <string name="imagenFondo">imagenFondo</string>
 </resources>

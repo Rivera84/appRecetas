@@ -4,103 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#25DB30"
+    android:background="#fff"
     tools:context=".MainActivity" >
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="380dp"
-        android:layout_height="403dp"
-        android:layout_marginTop="150dp"
-        android:background="#65B3F0B5"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="599dp"
+        android:layout_height="966dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/imagenFondo1"
+        app:srcCompat="@drawable/imagefondo1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C4000000"
+        android:contentDescription="@string/imagenFondo"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="215dp"
+            android:layout_height="224dp"
+            android:layout_margin="70dp"
+            android:background="@drawable/circulo_logo"
+            android:contentDescription="@string/imagenFondo"
+            android:padding="10dp"
+            android:translationY="-80dp"
+            app:srcCompat="@drawable/sinfondologo" />
+
         <Button
-            android:id="@+id/btnIniciarSesion"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnInicioUsuario"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_inicio_usuario"
+            android:elevation="5dp"
             android:text="@string/IniciarSesio"
-            android:translationX="80dp"
-            android:translationY="300dp" />
+            android:textSize="16sp"
+            android:translationY="-50dp" />
 
         <Button
-            android:id="@+id/btnSalir"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnInicioFacebook"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btnSalir"
-            android:translationX="215dp"
-            android:translationY="300dp" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_facebook"
+            android:elevation="5dp"
+            android:text="@string/btnInicioFacebook"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:translationY="-50dp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txVUsuario"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:translationX="50dp"
-            android:translationY="70dp"
-            android:typeface="serif" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txVConrasena"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:translationX="50dp"
-            android:translationY="170dp"
-            android:typeface="serif" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:translationX="50dp"
-            android:translationY="100dp" />
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:translationX="50dp"
-            android:translationY="200dp" />
-
-    </FrameLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="154dp"
-        android:layout_height="123dp"
-        android:layout_marginBottom="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/imagInicioSesio"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/IniciarSesio"
-        android:textColor="@android:color/background_light"
-        android:textSize="30sp"
-        android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
