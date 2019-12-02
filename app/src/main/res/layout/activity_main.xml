@@ -2,76 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cerrarSesion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="599dp"
-        android:layout_height="966dp"
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="683dp"
+        android:text="Cerrar Sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:contentDescription="@string/imagenFondo1"
-        app:srcCompat="@drawable/imagefondo1" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#C4000000"
-        android:contentDescription="@string/imagenFondo"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="215dp"
-            android:layout_height="224dp"
-            android:layout_margin="70dp"
-            android:background="@drawable/circulo_logo"
-            android:contentDescription="@string/imagenFondo"
-            android:padding="10dp"
-            android:translationY="-80dp"
-            app:srcCompat="@drawable/sinfondologo" />
-
-        <Button
-            android:id="@+id/btnInicioUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/btn_inicio_usuario"
-            android:elevation="5dp"
-            android:text="@string/IniciarSesio"
-            android:textSize="16sp"
-            android:translationY="-50dp" />
-
-        <Button
-            android:id="@+id/btnInicioFacebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/btn_facebook"
-            android:elevation="5dp"
-            android:text="@string/btnInicioFacebook"
-            android:textAllCaps="false"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            android:translationY="-50dp" />
-
-
-    </LinearLayout>
-    
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

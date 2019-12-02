@@ -1,4 +1,8 @@
 <resources>
+    <string name="facebook_app_id">2265383303751899</string>
+    <string name="fb_login_protocol_scheme">fb2265383303751899</string>
+
+
     <string name="app_name">appRecetas</string>
     <string name="IniciarSesio">Iniciar Sesión</string>
     <string name="btnSalir">Salir</string>
