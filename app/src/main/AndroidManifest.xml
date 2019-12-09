@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivityFb"></activity>
+        <activity android:name=".ItemContentReceta"></activity>
+        <activity
+            android:name=".Activity_Menu_Recetas"
+            android:label="@string/title_activity__menu__recetas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivityFb" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

@@ -5,6 +5,7 @@
 
     <string name="app_name">appRecetas</string>
     <string name="IniciarSesio">Iniciar Sesión</string>
+    <string name="CerrarSesion">Cerrar Sesión</string>
     <string name="btnSalir">Salir</string>
     <string name="txVUsuario">Usuario</string>
     <string name="txVConrasena">Contraseña</string>
@@ -12,8 +13,27 @@
     <string name="imagInicioSesio">Imagen</string>
     <string name="btnInicioFacebook">Inicio con Facebook</string>
     <string name="imagenFondo1">imagenFondo1</string>
+    <string name="imagenPerfil">ImagenPerfil</string>
     <string name="correoElectronico">Correo Electronico</string>
     <string name="mensajeCrearCuenta">Aun no tienes cuenta?</string>
     <string name="crearCuenta">CREAR CUENTA</string>
     <string name="imagenFondo">imagenFondo</string>
+    <string name="title_activity__menu__recetas">Activity_Menu_Recetas</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="txt_view_NombreComida">Pasta</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
 </resources>

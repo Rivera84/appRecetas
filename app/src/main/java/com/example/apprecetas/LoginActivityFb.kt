@@ -38,9 +38,9 @@ class LoginActivityFb : AppCompatActivity() {
             LoginManager.getInstance().registerCallback(callbackManager,
                 object : FacebookCallback<LoginResult> {
                     override fun onSuccess(result: LoginResult?) {
-                        // Log.d("MainActivity","Facebook token" + result.accessToken.token)
+
                         goMainScreen()
-                        //startActivity(Intent(applicationContext,))
+
                     }
 
                     override fun onCancel() {
@@ -52,18 +52,16 @@ class LoginActivityFb : AppCompatActivity() {
                     }
                 })
 
-            /*  FacebookSdk.sdkInitialize(getApplicationContext())
-              AppEventsLogger.activateApp(this)
-  */
+
         }
 
 
     }
 
     fun goMainScreen(){
-        intent= Intent(this,inicioSesioUsuario::class.java)
+        intent= Intent(this, ItemContentReceta ::class.java)
         startActivity(intent)
-        finish()
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
