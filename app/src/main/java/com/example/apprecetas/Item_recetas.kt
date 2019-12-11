@@ -1,9 +1,12 @@
 package com.example.apprecetas
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -11,23 +14,26 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.apprecetas.ui.home.HomeFragment
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.item_content_receta.*
 import kotlinx.android.synthetic.main.item_recetas.*
 
 class Item_recetas : AppCompatActivity() {
 
-    lateinit var  resquestQueue : RequestQueue
+    //lateinit var  resquestQueue : RequestQueue
     var itemList = ArrayList<Recipe>()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.item_recetas)
 
+        val objetoIntent:Intent=intent
+        var valorRecibido = objetoIntent.getStringExtra("valor_Edittext")
 
-        httpVolley_PlatoComida(getTipoComidaApi("pollo"))
+        httpVolley_PlatoComida(getTipoComidaApi(valorRecibido))
 
 
     }

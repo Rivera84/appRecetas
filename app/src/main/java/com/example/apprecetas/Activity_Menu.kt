@@ -16,21 +16,16 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.widget.Button
 
-class Activity_Menu_Recetas : AppCompatActivity() {
+class Activity_Menu : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity__menu__recetas)
-
-        //Boton Cerrar Sesion
-        val btnCerrarSesion = findViewById<Button>(R.id.btnCerrarSesion)
-        btnCerrarSesion.setOnClickListener {
-            goLoginScreen()
-        }
-
-
+        setContentView(R.layout.activity__menu)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -56,20 +51,12 @@ class Activity_Menu_Recetas : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.activity__menu__recetas, menu)
+        menuInflater.inflate(R.menu.activity__menu, menu)
         return true
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-
-
-
-    //Funcion pantalla Login
-    fun goLoginScreen() {
-        intent = Intent(this, LoginActivityFb ::class.java)
-        startActivity(intent)
     }
 }

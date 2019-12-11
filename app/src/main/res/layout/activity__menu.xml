@@ -9,7 +9,7 @@
     tools:openDrawer="start">
 
     <include
-        layout="@layout/app_bar_activity__menu__recetas"
+        layout="@layout/app_bar_activity__menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -19,19 +19,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_activity__menu__recetas"
-        app:menu="@menu/activity__menu__recetas_drawer" >
-
-        <Button
-            android:id="@+id/btnCerrarSesion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/CerrarSesion"
-            android:translationX="120dp"
-            android:translationY="570dp" />
-
-    </com.google.android.material.navigation.NavigationView>
-
-
+        app:headerLayout="@layout/nav_header_activity__menu"
+        app:menu="@menu/activity__menu_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
