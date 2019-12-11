@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Item_recetas"
     android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -16,22 +17,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <include layout="@layout/content_activity__menu__recetas" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Return"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994"
-        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

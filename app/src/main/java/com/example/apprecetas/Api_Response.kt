@@ -18,23 +18,24 @@ class Hits(val bookmarked: Boolean,
            val recipe: Recipe)
 
 class Recipe(val image: String,
-             val shareAs: String,
-             val cautions: List<String>,
-             val healthLabels: List<String>,
-             val label: String,
-             val source: String,
-             val calories: Double,
-             val uri: String,
-             val url: String,
-             val totalNutrients: TotalNutrients,
-             val dietLabels: List<String>,
-             val yield: Double,
-             val totalWeight: Double,
-             val digest: List<Digest>,
-             val ingredients: List<Ingredients>,
-             val totalDaily: TotalDaily,
-             val ingredientLines: List<String>)
-
+            // val shareAs: String,
+           //  val cautions: List<String>,
+          //   val healthLabels: List<String>,
+             val label: String
+           //  val source: String,
+          //   val calories: Double,
+          //   val uri: String,
+         //    val url: String,
+        //     val totalNutrients: TotalNutrients,
+          //   val dietLabels: List<String>,
+          //   val yield: Double,
+       //      val totalWeight: Double,
+          //   val digest: List<Digest>,
+          //   val ingredients: List<Ingredients>,
+          //   val totalDaily: TotalDaily,
+         //    val ingredientLines: List<String>
+    )
+/*
 class TotalDaily(val VITB6A: VITB6A,
                  val VITC: VITC,
                  val CHOCDF: CHOCDF,
@@ -227,3 +228,4 @@ class SUGAR(val unit: String,
 class Ingredients(val weight: Double,
                   val text: String)
 
+*/

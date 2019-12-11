@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:elevation="6dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="10dp"
     tools:ignore="ExtraText">
     tools:context=".ItemContentReceta">
 
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -23,18 +23,26 @@
                 android:id="@+id/ImageComida"
                 android:layout_width="121dp"
                 android:layout_height="108dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:contentDescription="@string/CerrarSesion"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@mipmap/ic_launcher_round" />
 
             <TextView
                 android:id="@+id/txtNombreComida"
-                android:layout_width="229dp"
-                android:layout_height="26dp"
+                android:layout_width="218dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/txt_view_NombreComida"
                 android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +60,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.cardview.widget.CardView>
 
 
-</LinearLayout>
+
+</androidx.cardview.widget.CardView>

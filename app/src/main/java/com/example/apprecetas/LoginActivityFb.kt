@@ -59,7 +59,7 @@ class LoginActivityFb : AppCompatActivity() {
     }
 
     fun goMainScreen(){
-        intent= Intent(this, ItemContentReceta ::class.java)
+        intent= Intent(this, Activity_Menu_Recetas ::class.java)
         startActivity(intent)
 
     }

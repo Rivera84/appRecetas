@@ -2,42 +2,46 @@ package com.example.apprecetas
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
+import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_content_receta.*
+import kotlinx.android.synthetic.main.item_recetas.*
 
-class ItemContentReceta : AppCompatActivity() {
+class Item_recetas : AppCompatActivity() {
 
-  //  val itemList = ArrayList<ApiResponse>()
+    lateinit var  resquestQueue : RequestQueue
+    var itemList = ArrayList<Recipe>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.item_content_receta)
-        val imageView= findViewById<ImageView>(R.id.ImageComida)
+        setContentView(R.layout.item_recetas)
+
 
         httpVolley_PlatoComida(getTipoComidaApi("pollo"))
+
+
     }
 
     //Realizar una peticion http para una comida "x"
     private fun httpVolley_PlatoComida(tipoComida: String) {
 
-val queue=Volley.newRequestQueue(this)
+        val queue=Volley.newRequestQueue(this)
 
 
         val stringReseta= StringRequest(Request.Method.GET,tipoComida,
-            Response.Listener<String>{response ->
+            Response.Listener<String>{ response ->
                 Log.d("HTTP Response",response)
+
                 Toast.makeText(this, "Conexión establecida", Toast.LENGTH_LONG).show()
                 jsonToObjectTipoCComida(response)
             }, Response.ErrorListener {
@@ -46,12 +50,7 @@ val queue=Volley.newRequestQueue(this)
                 Toast.makeText(this, "¡Ha ocurrido un error en la conexión!", Toast.LENGTH_SHORT).show()
             })
 
-/*                val recyclerView: RecyclerView=findViewById(R.id.recyclerView)
-                recyclerView.layoutManager=LinearLayoutManager(this)
-                recyclerView.setHasFixedSize(true)
-                val adapter = ApiAdapter(itemList)
-                recyclerView.adapter=adapter*/
-        queue.add(stringReseta)
+                queue.add(stringReseta)
     }
 
     private fun getTipoComidaApi(tipoComida: String): String {
@@ -66,9 +65,27 @@ val queue=Volley.newRequestQueue(this)
         val gson = Gson()
         val apiResponse = gson.fromJson(response, Json::class.java)
 
-           txtNombreComida.text = apiResponse.hits[0].recipe.label
-        Picasso.get().load(apiResponse.hits[0].recipe.image).into(ImageComida)
+        itemList.add(Recipe(apiResponse.hits[0].recipe.image,apiResponse.hits[0].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[1].recipe.image,apiResponse.hits[1].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[2].recipe.image,apiResponse.hits[2].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[3].recipe.image,apiResponse.hits[3].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[4].recipe.image,apiResponse.hits[4].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[5].recipe.image,apiResponse.hits[5].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[6].recipe.image,apiResponse.hits[6].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[7].recipe.image,apiResponse.hits[7].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[8].recipe.image,apiResponse.hits[8].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[9].recipe.image,apiResponse.hits[9].recipe.label))
 
-        }
 
+        var recyclerView: RecyclerView= findViewById(R.id.recyclerView)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager= LinearLayoutManager(this)
+        val adapter = ApiAdapter(this,itemList)
+        recyclerView.adapter=adapter
+        Log.d("ArregloRecipe","${itemList}")
     }
+
+
+
+
+}
