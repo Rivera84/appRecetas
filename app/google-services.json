@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "493504865084",
+    "firebase_url": "https://essen-50d67.firebaseio.com",
+    "project_id": "essen-50d67",
+    "storage_bucket": "essen-50d67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493504865084:android:12b0eb4ca82673ae9ab439",
+        "android_client_info": {
+          "package_name": "com.example.apprecetas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493504865084-m1rohchfub1uv36ltm3hckdtvtqlv3av.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apprecetas",
+            "certificate_hash": "924eaa8f270a08062c12486a407619643b100a66"
+          }
+        },
+        {
+          "client_id": "493504865084-24omqqslhjaevmtg1296osmhtn1f0e19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm5RGw7OH-RgMbbCMMr9gT-z26oNY-uFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493504865084-24omqqslhjaevmtg1296osmhtn1f0e19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
