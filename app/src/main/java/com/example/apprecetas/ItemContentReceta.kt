@@ -46,11 +46,6 @@ val queue=Volley.newRequestQueue(this)
                 Toast.makeText(this, "¡Ha ocurrido un error en la conexión!", Toast.LENGTH_SHORT).show()
             })
 
-/*                val recyclerView: RecyclerView=findViewById(R.id.recyclerView)
-                recyclerView.layoutManager=LinearLayoutManager(this)
-                recyclerView.setHasFixedSize(true)
-                val adapter = ApiAdapter(itemList)
-                recyclerView.adapter=adapter*/
         queue.add(stringReseta)
     }
 

@@ -2,19 +2,21 @@ package com.example.apprecetas
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
+import com.facebook.login.LoginManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import android.view.Menu
-import android.widget.Button
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity__menu.*
 
 class Activity_Menu : AppCompatActivity() {
 
@@ -23,11 +25,17 @@ class Activity_Menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity__menu)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        btnCerrarSesion.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            LoginManager.getInstance().logOut()
+            intent= Intent(this, LoginActivityFb::class.java)
+            startActivity(intent)
+        }
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->

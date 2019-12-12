@@ -20,6 +20,16 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_activity__menu"
-        app:menu="@menu/activity__menu_drawer" />
+        app:menu="@menu/activity__menu_drawer" >
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CerrarSesion"
+            android:translationX="120dp"
+            android:translationY="600dp"
+            tools:text="@string/CerrarSesion" />
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

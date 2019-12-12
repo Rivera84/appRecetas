@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-       // val btnCerrarSesion= findViewById<Button>(R.id.btnCerrarSesion)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

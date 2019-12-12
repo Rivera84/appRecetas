@@ -3,6 +3,7 @@ package com.example.apprecetas
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -71,24 +72,33 @@ class Item_recetas : AppCompatActivity() {
         val gson = Gson()
         val apiResponse = gson.fromJson(response, Json::class.java)
 
-        itemList.add(Recipe(apiResponse.hits[0].recipe.image,apiResponse.hits[0].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[1].recipe.image,apiResponse.hits[1].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[2].recipe.image,apiResponse.hits[2].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[3].recipe.image,apiResponse.hits[3].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[4].recipe.image,apiResponse.hits[4].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[5].recipe.image,apiResponse.hits[5].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[6].recipe.image,apiResponse.hits[6].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[7].recipe.image,apiResponse.hits[7].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[8].recipe.image,apiResponse.hits[8].recipe.label))
-        itemList.add(Recipe(apiResponse.hits[9].recipe.image,apiResponse.hits[9].recipe.label))
+        itemList.add(Recipe(apiResponse.hits[0].recipe.image,apiResponse.hits[0].recipe.label,apiResponse.hits[0].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[1].recipe.image,apiResponse.hits[1].recipe.label,apiResponse.hits[1].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[2].recipe.image,apiResponse.hits[2].recipe.label,apiResponse.hits[2].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[3].recipe.image,apiResponse.hits[3].recipe.label,apiResponse.hits[3].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[4].recipe.image,apiResponse.hits[4].recipe.label,apiResponse.hits[4].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[5].recipe.image,apiResponse.hits[5].recipe.label,apiResponse.hits[5].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[6].recipe.image,apiResponse.hits[6].recipe.label,apiResponse.hits[6].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[7].recipe.image,apiResponse.hits[7].recipe.label,apiResponse.hits[7].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[8].recipe.image,apiResponse.hits[8].recipe.label,apiResponse.hits[8].recipe.url))
+        itemList.add(Recipe(apiResponse.hits[9].recipe.image,apiResponse.hits[9].recipe.label,apiResponse.hits[9].recipe.url))
 
 
         var recyclerView: RecyclerView= findViewById(R.id.recyclerView)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager= LinearLayoutManager(this)
-        val adapter = ApiAdapter(this,itemList)
+        val adapter = ApiAdapter(this,itemList, object :ClickListener{
+            override fun onClick(view: View, index: Int) {
+                var texto=apiResponse.hits[index].recipe.url
+                val intent2=Intent(this@Item_recetas,Activity_webView::class.java)
+                intent2.putExtra("url",texto)
+                startActivity(intent2)
+            }
+        })
         recyclerView.adapter=adapter
         Log.d("ArregloRecipe","${itemList}")
+
+
     }
 
 

@@ -21,11 +21,11 @@ class Recipe(val image: String,
             // val shareAs: String,
            //  val cautions: List<String>,
           //   val healthLabels: List<String>,
-             val label: String
+             val label: String,
            //  val source: String,
           //   val calories: Double,
           //   val uri: String,
-         //    val url: String,
+             val url: String
         //     val totalNutrients: TotalNutrients,
           //   val dietLabels: List<String>,
           //   val yield: Double,
