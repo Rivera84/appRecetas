@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         intent=  Intent(this, LoginActivityFb ::class.java)
         startActivity(intent)
 
+
     }
 
 

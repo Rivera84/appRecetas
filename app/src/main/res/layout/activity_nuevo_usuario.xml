@@ -45,43 +45,46 @@
 
 
         <EditText
+            android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/correoElectronico"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
+            android:hint="@string/correoElectronico"
             android:inputType="textEmailAddress"
-            android:textSize="20sp"
             android:textColor="#ccc"
             android:textColorHint="#ccc"
-            />
+            android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/txtContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
             android:hint="@string/txVConrasena"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="15dp"
-            android:textSize="20sp"
             android:inputType="textPassword"
+            android:textColor="#ccc"
             android:textColorHint="#ccc"
-            android:textColor="#ccc"/>
+            android:textSize="20sp" />
+
         <EditText
+            android:id="@+id/txtConfirmarContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txVConrasenaConfirmar"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
-            android:textSize="20sp"
+            android:hint="@string/txVConrasenaConfirmar"
             android:inputType="textPassword"
+            android:textColor="#ccc"
             android:textColorHint="#ccc"
-            android:textColor="#ccc"/>
+            android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btnInicioUsuario"
+            android:id="@+id/btnInicioUsuario1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
